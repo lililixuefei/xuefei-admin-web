@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { getToken } from '@/utils/auth'
-import { MessageBox, Message } from 'element-ui'
+import { Message } from 'element-ui'
 
 
 // 创建 axios 实例
