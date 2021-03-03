@@ -2,7 +2,7 @@ module.exports = {
     /**
      * @description 网站标题
      */
-    title: 'EL-ADMIN',
+    title: 'XUEFEI-ADMIN',
     /**
      * @description 是否显示 tagsView
      */
@@ -26,7 +26,7 @@ module.exports = {
     /**
      * @description token key
      */
-    TokenKey: 'EL-ADMIN-TOEKN',
+    TokenKey: 'XUEFEI-ADMIN-TOEKN',
     /**
      * @description 请求超时时间，毫秒（默认2分钟）
      */

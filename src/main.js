@@ -4,7 +4,7 @@ import App from './App.vue'
 import 'normalize.css/normalize.css'
 
 import Cookies from 'js-cookie'
-import router from './router'
+import router from './router/routers'
 
 import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css';
@@ -14,6 +14,8 @@ import './assets/styles/index.scss'
 import './assets/icons' // icon
 
 import store from './store'
+
+import './router/index' // permission control
 
 
 

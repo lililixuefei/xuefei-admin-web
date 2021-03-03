@@ -6,11 +6,12 @@ import 'nprogress/nprogress.css'//
 import { buildMenus } from '@/api/system/menu'
 import { getToken } from '@/utils/auth'
 import { filterAsyncRouter } from '@/store/modules/permission'
-
+console.log('sss')
 const whiteList = ['/login']// no redirect whitelist
 NProgress.configure({ showSpinner: false })// NProgress Configuration
-
+// const router = new VueRouter({ ... })
 router.beforeEach((to, from, next) => {
+    console.log("hello2")
     if (to.meta.title) {
         document.title = to.meta.title + ' - ' + Config.title
     }
@@ -44,6 +45,7 @@ router.beforeEach((to, from, next) => {
         if (whiteList.indexOf(to.path) !== -1) { // 在免登录白名单，直接进入
             next()
         } else {
+            console.log("hello")
             next(`/login?redirect=${to.fullPath}`) // 否则全部重定向到登录页
             NProgress.done()
         }
