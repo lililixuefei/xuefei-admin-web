@@ -184,17 +184,17 @@ export default {
             Cookies.remove("password");
             Cookies.remove("rememberMe");
           }
-        //   this.$store
-        //     .dispatch("Login", user)
-        //     .then(() => {
-        //       this.loading = false;
-        //       this.$router.push({ path: this.redirect || "/" });
-        //     })
-        //     .catch(() => {
-        //       this.loading = false;
-        //       this.getCode();
-        //     });
-        // } else {
+          this.$store
+            .dispatch("Login", user)
+            .then(() => {
+              this.loading = false;
+              this.$router.push({ path: this.redirect || "/" });
+            })
+            .catch(() => {
+              this.loading = false;
+              this.getCode();
+            });
+        } else {
           console.log("error submit!!");
           return false;
         }

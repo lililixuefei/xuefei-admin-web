@@ -10,6 +10,12 @@ export const constantRouterMap = [
         component: (resolve) => require(['@/views/login'], resolve),
         hidden: true
     },
+    {
+        path: '/',
+        meta: { title: '首页', noCache: true },
+        component: (resolve) => require(['@/views/home'], resolve),
+        hidden: true
+    },
 ]
 
 export default new Router({
@@ -17,4 +23,4 @@ export default new Router({
     mode: 'history',
     scrollBehavior: () => ({ y: 0 }),
     routes: constantRouterMap
-  })
+})

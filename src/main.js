@@ -13,6 +13,8 @@ import 'element-ui/lib/theme-chalk/index.css';
 import './assets/styles/index.scss'
 import './assets/icons' // icon
 
+import store from './store'
+
 
 
 Vue.use(Element, {
@@ -23,5 +25,6 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
+  store,
   render: h => h(App),
 }).$mount('#app')
