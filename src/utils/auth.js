@@ -1,4 +1,5 @@
 import Cookies from 'js-cookie'
+import Config from '@/settings'
 
 const TokenKey = 'Admin-Token'
 
@@ -8,6 +9,12 @@ export function getToken() {
 
 export function setToken(token) {
   return Cookies.set(TokenKey, token)
+}
+
+export function setToken(token, rememberMe) {
+  if (rememberMe) {
+    return Cookies.set(TokenKey, token, { expires: Config.tokenCookieExpires })
+  } else return Cookies.set(TokenKey, token)
 }
 
 export function removeToken() {
