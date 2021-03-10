@@ -47,6 +47,8 @@ const user = {
     GetInfo({ commit }) {
       return new Promise((resolve, reject) => {
         getInfo().then(res => {
+          debugger
+          console.log(res)
           setUserInfo(res, commit)
           resolve(res)
         }).catch(error => {
@@ -83,7 +85,7 @@ export const logOut = (commit) => {
 
 export const setUserInfo = (res, commit) => {
   // 如果没有任何权限，则赋予一个默认的权限，避免请求死循环
-  if (res.roles.length === 0) {
+  if (res.user.length === 0) {
     commit('SET_ROLES', ['ROLE_SYSTEM_DEFAULT'])
   } else {
     commit('SET_ROLES', res.roles)
